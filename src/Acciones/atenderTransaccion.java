@@ -15,7 +15,7 @@ public class atenderTransaccion extends javax.swing.JFrame {
     String clienteMoneda = null;
     String clienteBanco = null;
     String destinatarioMoneda = null;
-    int tipoCambio = 500;
+    public static int tipoCambio = 500;
 
     public atenderTransaccion() {
         initComponents();

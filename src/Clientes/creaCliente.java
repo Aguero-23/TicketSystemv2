@@ -37,7 +37,6 @@ public class creaCliente extends javax.swing.JFrame {
         jTextField3.setText("");
         jTextField4.setText("");
         jTextField5.setText("");
-        jTextField6.setText("");
         jComboBox1.setSelectedIndex(0);
         jComboBox2.setSelectedIndex(0);
         jTextField1.requestFocus();
