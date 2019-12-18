@@ -11,8 +11,8 @@ public class Funciones {
     public void determinaAccion(Persona p) {
 //        System.out.println("here ");
         if (p.getTicket().substring(0, 1).equals("R")) {
-//            Acciones.atenderRetiro ar = new Acciones.atenderRetiro();
-//            ar.show();
+            Acciones.atenderRetiro ar = new Acciones.atenderRetiro();
+            ar.show();
 //            System.out.println("Retiro, "+p.getIdentificacion());
         } else if (p.getTicket().substring(0, 1).equals("T")) {
             Acciones.atenderTransaccion at = new Acciones.atenderTransaccion();

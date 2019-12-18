@@ -42,6 +42,36 @@ public class Funciones {
         return myRs;
     }
 
+    public boolean realizaRetiro(String id, int monto) {
+        Boolean retorno = null;
+        int sqlCliente = 0;
+        int sqlDestinatario = 0;
+        try {
+            Principal.DBConnection db = new Principal.DBConnection();
+            java.sql.Connection conn = db.connect();
+//                System.out.println("Gotit1");
+            Statement myStmt = conn.createStatement();
+//                System.out.println("Gotit2");
+//                UPDATE clientes set Saldo = Saldo+50000 where Cedula = 2
+            String sql = "UPDATE clientes set Saldo = Saldo+" + monto + " where"
+                    + " Cedula = " + id;
+//                System.out.println("SQL Cliente: "+sql);
+//                int result = 
+            sqlCliente = myStmt.executeUpdate(sql);
+
+            if (sqlCliente == 0) {
+                System.out.println("ResultSet is empty in Java");
+                return false;
+            } else {
+//                    System.out.println("Ced: "+myRs.getString("Cedula"));
+                retorno = true;
+            }
+        } catch (Exception exc) {
+            exc.printStackTrace();
+        }
+        return retorno;
+    }
+
     public boolean cargaLog(String remi, String desti, String log) {
         try {
             Principal.DBConnection db = new Principal.DBConnection();

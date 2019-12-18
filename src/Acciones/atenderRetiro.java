@@ -248,37 +248,36 @@ public class atenderRetiro extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String monedaCliente = (clienteMoneda.equals("Colones")) ? "¢" : "$";
 //        System.out.println("Dest "+destinatarioMoneda + " Clie "+clienteMoneda);
-//        int monto = !(destinatarioMoneda.equals(clienteMoneda)) ? (destinatarioMoneda.equals("Colones"))
-//                ? (Integer.parseInt(jTextField6.getText()) / tipoCambio) : (tipoCambio * Integer.parseInt(jTextField6.getText()))
-//                : Integer.parseInt(jTextField6.getText());
-//        int reply = JOptionPane.showConfirmDialog(null, "Se debitará de su cuenta la suma"
-//                + " de " + monedaCliente + monto, "Confirmar transacción", JOptionPane.YES_NO_OPTION);
-//        if (reply == JOptionPane.YES_OPTION) {
-//            if (validaMonto(monto)) {
-//                if (f.realizaTranferencia(jTextField1.getText(), (monto * -1), jTextField4.getText(),
-//                        Double.parseDouble(jTextField6.getText()))) {
-//                    JOptionPane.showMessageDialog(null, "La transferencia fue realizada con éxito",
-//                            "Transferencia exitosa", JOptionPane.INFORMATION_MESSAGE);
-//                    if(f.cargaLog(jTextField1.getText(),jTextField4.getText(), "Amount: "+monedaCliente
-//                            +monto+" - Sender: "+jTextField1.getText()+" - Receiver: "+jTextField4.getText())){
-//                            JOptionPane.showMessageDialog(null, "Error al reportar la transacción al log", 
-//                                    "LOG ERROR", JOptionPane.ERROR_MESSAGE);
-//                    }
-//                    cargaInicial();
-//                } else {
-//                    JOptionPane.showMessageDialog(null, "Hubo un error al realizar la transferencia",
-//                            "Error en la transferencia", JOptionPane.ERROR_MESSAGE);
-//                }
-//            } else {
-//                JOptionPane.showMessageDialog(null, "El monto a transferir es mayor al del que se dispone",
-//                        "Saldo insuficiente", JOptionPane.ERROR_MESSAGE);
-//            }
-//        }
+        int monto = Integer.parseInt(jTextField4.getText());
+        int reply = JOptionPane.showConfirmDialog(null, "Se debitará de su cuenta la suma"
+                + " de " + monedaCliente + monto, "Confirmar transacción", JOptionPane.YES_NO_OPTION);
+        if (reply == JOptionPane.YES_OPTION) {
+            if (validaMonto(monto)) {
+                if (f.realizaRetiro(jTextField1.getText(), (monto * -1))) {
+                    JOptionPane.showMessageDialog(null, "El retiro fue realizado con éxito",
+                            "Transferencia exitosa", JOptionPane.INFORMATION_MESSAGE);
+                    if (f.cargaLog(jTextField1.getText(), null, "Withdrawal of: " + monedaCliente
+                            + monto)) {
+                        JOptionPane.showMessageDialog(null, "Error al reportar la transacción al log",
+                                "LOG ERROR", JOptionPane.ERROR_MESSAGE);
+                        cargaInicial();
+                    }
+                    cargaInicial();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Hubo un error al realizar la transferencia",
+                            "Error en la transferencia", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "El monto a transferir es mayor al del que se dispone",
+                        "Saldo insuficiente", JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     //Botón Regresar
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        this.hide(); this.dispose();
+        this.hide();
+        this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
