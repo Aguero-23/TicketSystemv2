@@ -71,40 +71,56 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jl_Monto" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jl_Saldo" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="jtf_monto" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jl_Nombre" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jl_Identificacion" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jl_Banco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jl_Nombre" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jl_Identificacion" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jtf_identificacion" min="-2" pref="83" max="-2" attributes="0"/>
+                                                      <Component id="jtf_nombre" min="-2" pref="83" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Component id="jl_Saldo" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jl_Monto" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="63" pref="63" max="-2" attributes="0"/>
+                                                  <Component id="jtf_saldo" min="-2" pref="85" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jtf_identificacion" max="32767" attributes="0"/>
-                                              <Component id="jtf_nombre" max="32767" attributes="0"/>
-                                              <Component id="jtf_saldo" max="32767" attributes="0"/>
-                                              <Component id="jtf_monto" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_banco" alignment="1" min="-2" pref="91" max="-2" attributes="0"/>
-                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                                          <Component id="jb_regresar" min="-2" pref="100" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jb_regresar" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jb_transferir" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jb_transferir" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jl_TipoDeCambio" min="-2" pref="278" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jl_TipoDeCambio" alignment="1" min="-2" pref="262" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jl_CuentaDestino" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jl_NombreDestino" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jl_CuentaDestino" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jl_NombreDestino" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jl_Banco" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
@@ -114,7 +130,8 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jb_buscar" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="jtf_nombreDestino" min="-2" pref="218" max="-2" attributes="0"/>
+                                      <Component id="jtf_nombreDestino" pref="218" max="32767" attributes="0"/>
+                                      <Component id="jtf_banco" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -154,22 +171,22 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jtf_banco" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jl_Banco" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jl_TipoDeCambio" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jl_Saldo" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jtf_saldo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jl_Banco" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jl_TipoDeCambio" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jl_Monto" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jtf_monto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jb_regresar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jb_transferir" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="27" max="32767" attributes="0"/>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
