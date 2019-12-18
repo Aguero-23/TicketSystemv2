@@ -234,6 +234,7 @@ public class Vista extends javax.swing.JFrame {
 
         this.jta_impresion.setText("");
         this.jta_impresion.setText(recorrido);
+        this.jta_impresion.setCaretPosition(0);
     }//GEN-LAST:event_jb_inOrdenActionPerformed
 
     private void jb_preOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_preOrdenActionPerformed
@@ -243,6 +244,7 @@ public class Vista extends javax.swing.JFrame {
 
         this.jta_impresion.setText("");
         this.jta_impresion.setText(recorrido);
+        this.jta_impresion.setCaretPosition(0);
     }//GEN-LAST:event_jb_preOrdenActionPerformed
 
     private void jb_postOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_postOrdenActionPerformed
@@ -252,6 +254,7 @@ public class Vista extends javax.swing.JFrame {
 
         this.jta_impresion.setText("");
         this.jta_impresion.setText(recorrido);
+        this.jta_impresion.setCaretPosition(0);
     }//GEN-LAST:event_jb_postOrdenActionPerformed
 
     private void jb_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_regresarActionPerformed
