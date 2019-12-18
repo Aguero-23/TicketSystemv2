@@ -1,5 +1,7 @@
 package Principal;
 
+import javax.swing.JOptionPane;
+
 public class Cola {
 
     Nodo frente;
@@ -14,6 +16,20 @@ public class Cola {
             ultimo.setSiguiente(aux);
         }
         ultimo = aux;
+    }
+
+    public boolean encuentra(int id) {
+        boolean encontrar = false;
+        Nodo aux = frente;
+        while (encontrar != true && aux != null) {
+            if (aux.getPersona().getIdentificacion() == id) {
+//                System.out.println("Se encontro");
+                encontrar = true;
+            } else {
+                aux = aux.getSiguiente();
+            }
+        }
+        return encontrar;
     }
 
     public Persona extrae(char tipo) {
@@ -46,12 +62,15 @@ public class Cola {
                     System.out.println("Nodo eliminado");
                     encontrado = true;
                 }
-                anterior = actual;
-                actual = actual.getSiguiente();
+                if (encontrado) {
 
+                } else {
+                    anterior = actual;
+                    actual = actual.getSiguiente();
+                }
             }
         } else if (!encontrado) {
-            System.out.println("Nodo no encontrado");
+            System.out.println("Persona no encontrada");
         } else {
             System.out.println("Cola vacia");
         }
@@ -129,8 +148,14 @@ public class Cola {
                         getter = c.extrae('T');
                         flag = true;
                         break;
+                    case "informacion":
+                        flag = false;
+//                        JOptionPane.showMessageDialog(null, "Esta caja no tiene personas por atender.");
                 }
                 aux = aux.getSiguiente();
+            }
+            if (!flag) {
+                JOptionPane.showMessageDialog(null, "Esta caja no tiene personas por atender.");
             }
         }
         return getter;
@@ -150,8 +175,17 @@ public class Cola {
                         getter = c.extrae('I');
                         flag = true;
                         break;
+                    case "transaccion":
+                        flag = false;
+//                        JOptionPane.showMessageDialog(null, "Esta caja no tiene personas por atender.");
+                    case "retiro":
+                        flag = false;
+//                        JOptionPane.showMessageDialog(null, "Esta caja no tiene personas por atender.");
                 }
                 aux = aux.getSiguiente();
+            }
+            if (!flag) {
+                JOptionPane.showMessageDialog(null, "Esta caja no tiene personas por atender.");
             }
         }
         return getter;

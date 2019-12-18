@@ -134,6 +134,7 @@ public class Vista extends javax.swing.JFrame {
         jdp_grafico.add(jInternalFrame2);
         jInternalFrame2.setBounds(0, 0, 600, 320);
 
+        jb_inOrden.setBackground(new java.awt.Color(255, 255, 255));
         jb_inOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_stack_16px.png"))); // NOI18N
         jb_inOrden.setText("InOrden");
         jb_inOrden.addActionListener(new java.awt.event.ActionListener() {
@@ -142,6 +143,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
+        jb_preOrden.setBackground(new java.awt.Color(255, 255, 255));
         jb_preOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_stack_16px.png"))); // NOI18N
         jb_preOrden.setText("PreOrden");
         jb_preOrden.addActionListener(new java.awt.event.ActionListener() {
@@ -150,6 +152,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
+        jb_postOrden.setBackground(new java.awt.Color(255, 255, 255));
         jb_postOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_stack_16px.png"))); // NOI18N
         jb_postOrden.setText("PostOrden");
         jb_postOrden.addActionListener(new java.awt.event.ActionListener() {

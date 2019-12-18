@@ -118,6 +118,7 @@ public class atenderTransaccion extends javax.swing.JFrame {
 
         jtf_nombreDestino.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
+        jb_buscar.setBackground(new java.awt.Color(255, 255, 255));
         jb_buscar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jb_buscar.setText("Buscar");
         jb_buscar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
@@ -149,6 +150,7 @@ public class atenderTransaccion extends javax.swing.JFrame {
 
         jtf_banco.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
+        jb_regresar.setBackground(new java.awt.Color(255, 255, 255));
         jb_regresar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jb_regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_left_16px_2.png"))); // NOI18N
         jb_regresar.setText("Regresar");

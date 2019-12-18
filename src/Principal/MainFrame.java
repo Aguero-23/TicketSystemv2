@@ -8,7 +8,7 @@ import javax.swing.AbstractButton;
 import javax.swing.JOptionPane;
 
 public class MainFrame extends javax.swing.JFrame {
-    
+
     public static String nextInLine = null;
     int numTicket = 1;
     int contPersonas = 0;
@@ -17,15 +17,15 @@ public class MainFrame extends javax.swing.JFrame {
     String ticket = "";
     Funciones f = new Funciones();
     Clientes.Funciones cf = new Clientes.Funciones();
-    
+
     public MainFrame() {
-        initComponents();       
+        initComponents();
         jrdbG_Group.add(jrdb_Retiros);
         jrdbG_Group.add(jrdb_Informacion);
         jrdbG_Group.add(jrdb_Transferencias);
         jtf_Identificacion.requestFocus();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -323,7 +323,8 @@ public class MainFrame extends javax.swing.JFrame {
     private boolean ValidacionesForm() {
         boolean val = true;
         try {
-            if (lis.buscar(Integer.parseInt(jtf_Identificacion.getText()))) { // Valida si la cédula ya está en espera
+//            if (lis.buscar(Integer.parseInt(jtf_Identificacion.getText()))) { // Valida si la cédula ya está en espera
+            if (c.encuentra(Integer.parseInt(jtf_Identificacion.getText()))) { // Valida si la cédula ya está en espera
                 JOptionPane.showMessageDialog(this, "Ya estas en espera.",
                         "Cédula duplicada", JOptionPane.ERROR_MESSAGE);
                 val = false;
@@ -332,7 +333,7 @@ public class MainFrame extends javax.swing.JFrame {
                     || jtf_Identificacion.getText().equals(null)
                     || jtf_Identificacion.getText().equals(" ")
                     || jtf_Identificacion.getText().equals("0")) {
-                
+
                 JOptionPane.showMessageDialog(this, "El formulario está vacio o le faltan datos.",
                         "Error en datos", JOptionPane.ERROR_MESSAGE);
                 val = false;
@@ -343,12 +344,15 @@ public class MainFrame extends javax.swing.JFrame {
                 val = false;
                 jtf_Identificacion.requestFocus();
             }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, "Error al digitar cedula, probablemente contiene una letra.");
+            jtf_Identificacion.setText("0");
         } catch (Exception e) {
             e.printStackTrace();
         }
         return val;
     }
-    
+
     private void InsertarTicket(String tipoTransacion) {
         ticket = tipoTransacion + numTicket;
         lis.insert(new Persona(Integer.parseInt(jtf_Identificacion.getText()), ticket, numTicket));
@@ -362,7 +366,7 @@ public class MainFrame extends javax.swing.JFrame {
     /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
     private void jb_GenerarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_GenerarBotonActionPerformed
-        
+
         if (ValidacionesForm()) {
             AbstractButton aux = getSelectedOption(); //Obtiene la seleccion del radio button
             if (aux == null) { // Si no se selecciona nada entonces devuelve un mensaje para que seleccione
@@ -372,7 +376,7 @@ public class MainFrame extends javax.swing.JFrame {
                 InsertarTicket(aux.getName());
             }
         } else {
-            
+
         }
     }//GEN-LAST:event_jb_GenerarBotonActionPerformed
 
@@ -412,25 +416,41 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jb_Caja1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_Caja1ActionPerformed
         // TODO add your handling code here:
-        contPersonas = contPersonas - 1;
-        jl_persEnCola.setText("" + contPersonas);
-        f.Atender();
+        if (jl_persEnCola.getText().equals("0")) {
+            JOptionPane.showMessageDialog(rootPane, "No hay personas en cola.");
+            jl_persEnCola.setText("" + 0);
+        } else {
+            f.Atender();
+            contPersonas = contPersonas - 1;
+            jl_persEnCola.setText("" + contPersonas);
+        }
+
 //        System.out.println("#1 Atendido: "+f.Atender());
     }//GEN-LAST:event_jb_Caja1ActionPerformed
 
     private void jb_Caja2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_Caja2ActionPerformed
         // TODO add your handling code here:
-        contPersonas = contPersonas - 1;
-        jl_persEnCola.setText("" + contPersonas);
-        f.AtenderCaja2();
+        if (jl_persEnCola.getText().equals("0")) {
+            JOptionPane.showMessageDialog(rootPane, "No hay personas en cola.");
+            jl_persEnCola.setText("" + 0);
+        } else {
+            f.AtenderCaja2();
+            contPersonas = contPersonas - 1;
+            jl_persEnCola.setText("" + contPersonas);
+        }
 //        System.out.println("#2 Atendido: "+f.AtenderCaja2());
     }//GEN-LAST:event_jb_Caja2ActionPerformed
 
     private void jb_Caja3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_Caja3ActionPerformed
         // TODO add your handling code here:
-        contPersonas = contPersonas - 1;
-        jl_persEnCola.setText("" + contPersonas);
-        f.AtenderCaja3();
+        if (jl_persEnCola.getText().equals("0")) {
+            JOptionPane.showMessageDialog(rootPane, "No hay personas en cola.");
+            jl_persEnCola.setText("" + 0);
+        } else {
+            f.AtenderCaja3();
+            contPersonas = contPersonas - 1;
+            jl_persEnCola.setText("" + contPersonas);
+        }
 //        System.out.println("#3 Atendido: "+f.AtenderCaja3());
     }//GEN-LAST:event_jb_Caja3ActionPerformed
 
@@ -454,7 +474,9 @@ public class MainFrame extends javax.swing.JFrame {
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         try {
             Graficos.Vista v = new Graficos.Vista();
-            v.show(); this.hide(); this.dispose();
+            v.show();
+            this.hide();
+            this.dispose();
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
