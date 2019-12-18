@@ -68,9 +68,9 @@ public class Vista extends javax.swing.JFrame {
     }
 
     private void inicializar(boolean enable) {
-        this.InOrden.setEnabled(enable);
-        this.PostOrden.setEnabled(enable);
-        this.PreOrden.setEnabled(enable);
+        this.jb_inOrden.setEnabled(enable);
+        this.jb_postOrden.setEnabled(enable);
+        this.jb_preOrden.setEnabled(enable);
     }
 
     /**
@@ -82,36 +82,35 @@ public class Vista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        impresion = new javax.swing.JTextArea();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jp_vistaGrafico = new javax.swing.JPanel();
+        jsp_resultados = new javax.swing.JScrollPane();
+        jta_impresion = new javax.swing.JTextArea();
+        jdp_grafico = new javax.swing.JDesktopPane();
         jInternalFrame2 = new javax.swing.JInternalFrame();
-        InOrden = new javax.swing.JButton();
-        PreOrden = new javax.swing.JButton();
-        PostOrden = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jb_inOrden = new javax.swing.JButton();
+        jb_preOrden = new javax.swing.JButton();
+        jb_postOrden = new javax.swing.JButton();
+        jb_regresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gráfico de saldos");
         setResizable(false);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Panel de Pruebas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 10))); // NOI18N
-        jPanel2.setOpaque(false);
+        jp_vistaGrafico.setBackground(new java.awt.Color(255, 255, 255));
+        jp_vistaGrafico.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Panel de Pruebas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 10))); // NOI18N
+        jp_vistaGrafico.setOpaque(false);
 
-        jScrollPane1.setOpaque(false);
+        jsp_resultados.setOpaque(false);
 
-        impresion.setEditable(false);
-        impresion.setColumns(20);
-        impresion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        impresion.setRows(5);
-        impresion.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultados de operaciones"));
-        impresion.setOpaque(false);
-        jScrollPane1.setViewportView(impresion);
+        jta_impresion.setEditable(false);
+        jta_impresion.setColumns(20);
+        jta_impresion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jta_impresion.setRows(5);
+        jta_impresion.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultados de operaciones"));
+        jta_impresion.setOpaque(false);
+        jsp_resultados.setViewportView(jta_impresion);
 
-        jDesktopPane1.setOpaque(false);
+        jdp_grafico.setOpaque(false);
 
         jInternalFrame2.setIconifiable(true);
         jInternalFrame2.setMaximizable(true);
@@ -131,104 +130,83 @@ public class Vista extends javax.swing.JFrame {
             .addGap(0, 290, Short.MAX_VALUE)
         );
 
-        jDesktopPane1.add(jInternalFrame2);
+        jdp_grafico.add(jInternalFrame2);
         jInternalFrame2.setBounds(10, 10, 600, 320);
 
-        InOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        InOrden.setText("InOrden");
-        InOrden.addActionListener(new java.awt.event.ActionListener() {
+        jb_inOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jb_inOrden.setText("InOrden");
+        jb_inOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InOrdenActionPerformed(evt);
+                jb_inOrdenActionPerformed(evt);
             }
         });
 
-        PreOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        PreOrden.setText("PreOrden");
-        PreOrden.addActionListener(new java.awt.event.ActionListener() {
+        jb_preOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jb_preOrden.setText("PreOrden");
+        jb_preOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PreOrdenActionPerformed(evt);
+                jb_preOrdenActionPerformed(evt);
             }
         });
 
-        PostOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        PostOrden.setText("PostOrden");
-        PostOrden.addActionListener(new java.awt.event.ActionListener() {
+        jb_postOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jb_postOrden.setText("PostOrden");
+        jb_postOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PostOrdenActionPerformed(evt);
+                jb_postOrdenActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_left_16px_2.png"))); // NOI18N
-        jButton3.setText("Volver al menu");
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jb_regresar.setBackground(new java.awt.Color(255, 255, 255));
+        jb_regresar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jb_regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_left_16px_2.png"))); // NOI18N
+        jb_regresar.setText("Volver al menu");
+        jb_regresar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jb_regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jb_regresarActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_left_16px_2.png"))); // NOI18N
-        jButton4.setText("Volver al menu");
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jp_vistaGraficoLayout = new javax.swing.GroupLayout(jp_vistaGrafico);
+        jp_vistaGrafico.setLayout(jp_vistaGraficoLayout);
+        jp_vistaGraficoLayout.setHorizontalGroup(
+            jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
+                .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jdp_grafico, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
+                        .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(InOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jb_inOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(4, 4, 4)
-                                .addComponent(PreOrden)
+                                .addComponent(jb_preOrden)
                                 .addGap(4, 4, 4)
-                                .addComponent(PostOrden))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jb_postOrden))
+                            .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
                                 .addGap(62, 62, 62)
-                                .addComponent(jButton4)))
+                                .addComponent(jb_regresar)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jsp_resultados, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 3, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(232, 232, 232)
-                    .addComponent(jButton3)
-                    .addContainerGap(233, Short.MAX_VALUE)))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jp_vistaGraficoLayout.setVerticalGroup(
+            jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jdp_grafico, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(InOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PreOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PostOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jsp_resultados, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
+                        .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jb_inOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_preOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_postOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)))
+                        .addComponent(jb_regresar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(204, 204, 204)
-                    .addComponent(jButton3)
-                    .addContainerGap(205, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -237,14 +215,14 @@ public class Vista extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jp_vistaGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jp_vistaGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -252,52 +230,47 @@ public class Vista extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void InOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InOrdenActionPerformed
+    private void jb_inOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_inOrdenActionPerformed
         // TODO add your handling code here:
         String recorrido = null;
         recorrido = this.simulador.inOrden();
 
-        this.impresion.setText("");
-        this.impresion.setText(recorrido);
-    }//GEN-LAST:event_InOrdenActionPerformed
+        this.jta_impresion.setText("");
+        this.jta_impresion.setText(recorrido);
+    }//GEN-LAST:event_jb_inOrdenActionPerformed
 
-    private void PreOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreOrdenActionPerformed
+    private void jb_preOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_preOrdenActionPerformed
         // TODO add your handling code here:
         String recorrido = null;
         recorrido = this.simulador.preOrden();
 
-        this.impresion.setText("");
-        this.impresion.setText(recorrido);
-    }//GEN-LAST:event_PreOrdenActionPerformed
+        this.jta_impresion.setText("");
+        this.jta_impresion.setText(recorrido);
+    }//GEN-LAST:event_jb_preOrdenActionPerformed
 
-    private void PostOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PostOrdenActionPerformed
+    private void jb_postOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_postOrdenActionPerformed
         // TODO add your handling code here:
         String recorrido = null;
         recorrido = this.simulador.postOrden();
 
-        this.impresion.setText("");
-        this.impresion.setText(recorrido);
-    }//GEN-LAST:event_PostOrdenActionPerformed
+        this.jta_impresion.setText("");
+        this.jta_impresion.setText(recorrido);
+    }//GEN-LAST:event_jb_postOrdenActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Principal.MainFrame mf = new Principal.MainFrame();
-        mf.show(); this.hide(); this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jb_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_regresarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jb_regresarActionPerformed
 
     public void complementos() {
         this.repintarArbol();
     }
 
     private void repintarArbol() {
-        this.jDesktopPane1.removeAll();
+        this.jdp_grafico.removeAll();
         Rectangle tamaño = this.jInternalFrame2.getBounds();
         this.jInternalFrame2 = null;
         this.jInternalFrame2 = new JInternalFrame("Representación gráfica", true);
-        this.jDesktopPane1.add(this.jInternalFrame2, JLayeredPane.DEFAULT_LAYER);
+        this.jdp_grafico.add(this.jInternalFrame2, JLayeredPane.DEFAULT_LAYER);
         this.jInternalFrame2.setVisible(true);
         this.jInternalFrame2.setBounds(tamaño);
         this.jInternalFrame2.setEnabled(false);
@@ -350,17 +323,14 @@ public class Vista extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton InOrden;
-    private javax.swing.JButton PostOrden;
-    private javax.swing.JButton PreOrden;
-    private javax.swing.JTextArea impresion;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JInternalFrame jInternalFrame2;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jb_inOrden;
+    private javax.swing.JButton jb_postOrden;
+    private javax.swing.JButton jb_preOrden;
+    private javax.swing.JButton jb_regresar;
+    private javax.swing.JDesktopPane jdp_grafico;
+    private javax.swing.JPanel jp_vistaGrafico;
+    private javax.swing.JScrollPane jsp_resultados;
+    private javax.swing.JTextArea jta_impresion;
     // End of variables declaration//GEN-END:variables
 }

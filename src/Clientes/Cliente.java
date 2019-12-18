@@ -1,9 +1,5 @@
 package Clientes;
 
-/**
- *
- * @author kevinvsequeira
- */
 public class Cliente {
 
     public String getCedula() {

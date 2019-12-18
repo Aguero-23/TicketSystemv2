@@ -1,22 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Clientes;
 
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author kevinvsequeira
- */
 public class creaCliente extends javax.swing.JFrame {
 
-    /**
-     * Creates new form crearCliente
-     */
     Principal.MainFrame mf = new Principal.MainFrame();
     
     public creaCliente() {
@@ -25,21 +13,21 @@ public class creaCliente extends javax.swing.JFrame {
     }
     
     public void cargarInicial(){
-        jTextField1.requestFocus();
-        jTextField6.setEditable(false);
-        jTextField6.setText(""+Calendar.getInstance().get(Calendar.YEAR)+"/"+
+        jtf_identificacion.requestFocus();
+        jtf_creacion.setEditable(false);
+        jtf_creacion.setText(""+Calendar.getInstance().get(Calendar.YEAR)+"/"+
                 ((Calendar.getInstance().get(Calendar.MONTH))+1)+"/"+Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
     }
     
     public void cleanFields(){
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jTextField5.setText("");
-        jComboBox1.setSelectedIndex(0);
-        jComboBox2.setSelectedIndex(0);
-        jTextField1.requestFocus();
+        jtf_identificacion.setText("");
+        jtf_nombre.setText("");
+        jtf_apellido1.setText("");
+        jtf_apellido2.setText("");
+        jtf_saldoInicial.setText("");
+        jcb_banco.setSelectedIndex(0);
+        jcb_moneda.setSelectedIndex(0);
+        jtf_identificacion.requestFocus();
     }
 
     /**
@@ -51,242 +39,242 @@ public class creaCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jp_creaCliente = new javax.swing.JPanel();
+        jl_Identificacion = new javax.swing.JLabel();
+        jl_Nombre = new javax.swing.JLabel();
+        jl_Apellido1 = new javax.swing.JLabel();
+        jl_Apellido2 = new javax.swing.JLabel();
+        jtf_identificacion = new javax.swing.JTextField();
+        jtf_nombre = new javax.swing.JTextField();
+        jtf_apellido2 = new javax.swing.JTextField();
+        jtf_saldoInicial = new javax.swing.JTextField();
+        jtf_creacion = new javax.swing.JTextField();
+        jl_Banco = new javax.swing.JLabel();
+        jl_Moneda = new javax.swing.JLabel();
+        jl_SaldoInicial = new javax.swing.JLabel();
+        jl_Creacion = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jtf_apellido1 = new javax.swing.JTextField();
+        jcb_banco = new javax.swing.JComboBox<>();
+        jcb_moneda = new javax.swing.JComboBox<>();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jb_anadirSistema = new javax.swing.JButton();
+        jb_regresar = new javax.swing.JButton();
+        jl_TituloAnadirCliente = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jl_InformacionCliente = new javax.swing.JLabel();
+        jl_InformacionBanco = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        jp_creaCliente.setBackground(new java.awt.Color(255, 255, 255));
+        jp_creaCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel2.setText("Cédula:");
+        jl_Identificacion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jl_Identificacion.setText("Cédula:");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel3.setText("Nombre:");
+        jl_Nombre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jl_Nombre.setText("Nombre:");
 
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel4.setText("Apellido 1:");
+        jl_Apellido1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jl_Apellido1.setText("Apellido 1:");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel5.setText("Apellido 2:");
+        jl_Apellido2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jl_Apellido2.setText("Apellido 2:");
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jtf_identificacion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jtf_nombre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jTextField4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jtf_apellido2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jTextField5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jtf_saldoInicial.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jTextField6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jtf_creacion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel6.setText("Banco:");
+        jl_Banco.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jl_Banco.setText("Banco:");
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_coins_16px.png"))); // NOI18N
-        jLabel7.setText("Moneda:");
+        jl_Moneda.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jl_Moneda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_coins_16px.png"))); // NOI18N
+        jl_Moneda.setText("Moneda:");
 
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_cash_16px.png"))); // NOI18N
-        jLabel8.setText("Saldo inicial:");
+        jl_SaldoInicial.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jl_SaldoInicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_cash_16px.png"))); // NOI18N
+        jl_SaldoInicial.setText("Saldo inicial:");
 
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_calendar_16px.png"))); // NOI18N
-        jLabel9.setText("Creación:");
+        jl_Creacion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jl_Creacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_calendar_16px.png"))); // NOI18N
+        jl_Creacion.setText("Creación:");
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jtf_apellido1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jComboBox1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "BAC", "Davivienda", "Promerica", "Nacional", "Costa Rica" }));
+        jcb_banco.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jcb_banco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "BAC", "Davivienda", "Promerica", "Nacional", "Costa Rica" }));
 
-        jComboBox2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Dolares", "Colones" }));
+        jcb_moneda.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jcb_moneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Dolares", "Colones" }));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 204, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_add_16px.png"))); // NOI18N
-        jButton1.setText("Añadir al sistema");
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jb_anadirSistema.setBackground(new java.awt.Color(255, 255, 255));
+        jb_anadirSistema.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jb_anadirSistema.setForeground(new java.awt.Color(0, 204, 0));
+        jb_anadirSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_add_16px.png"))); // NOI18N
+        jb_anadirSistema.setText("Añadir al sistema");
+        jb_anadirSistema.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jb_anadirSistema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jb_anadirSistemaActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_left_16px_2.png"))); // NOI18N
-        jButton2.setText("Volver al menu");
-        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jb_regresar.setBackground(new java.awt.Color(255, 255, 255));
+        jb_regresar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jb_regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_left_16px_2.png"))); // NOI18N
+        jb_regresar.setText("Volver al menu");
+        jb_regresar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jb_regresar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jb_regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jb_regresarActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_user_account_32px.png"))); // NOI18N
-        jLabel1.setText("Añadir Cliente");
+        jl_TituloAnadirCliente.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jl_TituloAnadirCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_user_account_32px.png"))); // NOI18N
+        jl_TituloAnadirCliente.setText("Añadir Cliente");
 
-        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_user_32px.png"))); // NOI18N
-        jLabel11.setText("Informacion del Cliente: ");
-        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jl_InformacionCliente.setBackground(new java.awt.Color(255, 255, 255));
+        jl_InformacionCliente.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jl_InformacionCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_user_32px.png"))); // NOI18N
+        jl_InformacionCliente.setText("Informacion del Cliente: ");
+        jl_InformacionCliente.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_museum_32px.png"))); // NOI18N
-        jLabel12.setText("Informacion del Banco: ");
-        jLabel12.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jl_InformacionBanco.setBackground(new java.awt.Color(255, 255, 255));
+        jl_InformacionBanco.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jl_InformacionBanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_museum_32px.png"))); // NOI18N
+        jl_InformacionBanco.setText("Informacion del Banco: ");
+        jl_InformacionBanco.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jp_creaClienteLayout = new javax.swing.GroupLayout(jp_creaCliente);
+        jp_creaCliente.setLayout(jp_creaClienteLayout);
+        jp_creaClienteLayout.setHorizontalGroup(
+            jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_creaClienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 2, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_creaClienteLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jl_InformacionCliente)
+                            .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_creaClienteLayout.createSequentialGroup()
                                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addContainerGap())
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel1)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_creaClienteLayout.createSequentialGroup()
+                                    .addComponent(jl_TituloAnadirCliente)
                                     .addGap(195, 195, 195)))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_creaClienteLayout.createSequentialGroup()
+                                .addComponent(jb_regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
+                                .addComponent(jb_anadirSistema))
+                            .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jl_Identificacion)
+                                    .addComponent(jl_Nombre)
+                                    .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                                        .addComponent(jl_Apellido2)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jtf_apellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jp_creaClienteLayout.createSequentialGroup()
                                         .addGap(75, 75, 75)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
+                                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jtf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtf_identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                                        .addComponent(jl_Apellido1)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jtf_apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(60, 60, 60)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel9)
-                                            .addComponent(jLabel8)
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel6)
-                                                .addComponent(jLabel7)))
+                                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jl_Creacion)
+                                            .addComponent(jl_SaldoInicial)
+                                            .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jl_Banco)
+                                                .addComponent(jl_Moneda)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel12)
+                                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jcb_banco, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jcb_moneda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtf_saldoInicial, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtf_creacion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                                        .addComponent(jl_InformacionBanco)
                                         .addGap(0, 0, Short.MAX_VALUE))))
                             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addContainerGap())))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jp_creaClienteLayout.setVerticalGroup(
+            jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_creaClienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jl_TituloAnadirCliente)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel12))
+                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jl_InformacionCliente)
+                            .addComponent(jl_InformacionBanco))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jl_Identificacion)
+                            .addComponent(jtf_identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jl_Banco)
+                            .addComponent(jcb_banco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel3)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jl_Nombre)
+                                .addComponent(jtf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jcb_moneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jl_Moneda, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jl_SaldoInicial)
+                                    .addComponent(jtf_saldoInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jl_Creacion)
+                                    .addComponent(jtf_creacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4))
+                            .addGroup(jp_creaClienteLayout.createSequentialGroup()
+                                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jtf_apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jl_Apellido1))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jl_Apellido2)
+                                    .addComponent(jtf_apellido2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(8, 8, 8))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(jp_creaClienteLayout.createSequentialGroup()
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                .addGroup(jp_creaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_regresar)
+                    .addComponent(jb_anadirSistema))
                 .addGap(33, 33, 33))
         );
 
@@ -294,12 +282,12 @@ public class creaCliente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jp_creaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jp_creaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -308,34 +296,34 @@ public class creaCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //GEN-FIRST:event_jButton1ActionPerformed
     //Boton Crear
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void jb_anadirSistemaActionPerformed(java.awt.event.ActionEvent evt) {                                         
         Funciones f = new Funciones();
             if(
-                "".equals(jTextField1.getText()) ||
-                "".equals(jTextField2.getText()) ||
-                "".equals(jTextField3.getText()) ||
-                "".equals(jTextField3.getText()) ||
-                "".equals(jComboBox1.getSelectedItem().toString()) ||
-                "".equals(jComboBox2.getSelectedItem().toString()) ||
-                "".equals(jTextField5.getText()) ||
-                "".equals(jTextField6.getText()) 
+                "".equals(jtf_identificacion.getText()) ||
+                "".equals(jtf_nombre.getText()) ||
+                "".equals(jtf_apellido1.getText()) ||
+                "".equals(jtf_apellido1.getText()) ||
+                "".equals(jcb_banco.getSelectedItem().toString()) ||
+                "".equals(jcb_moneda.getSelectedItem().toString()) ||
+                "".equals(jtf_saldoInicial.getText()) ||
+                "".equals(jtf_creacion.getText()) 
             ){
                 JOptionPane.showMessageDialog(null,"No pueden quedar espacios en blanco, "
                         + "por favor complételos e intente nuevamente", "Error", JOptionPane.ERROR_MESSAGE);
-            }else if(f.consultaCliente(jTextField1.getText())!=null){
+            }else if(f.consultaCliente(jtf_identificacion.getText())!=null){
                 JOptionPane.showMessageDialog(null, "La cédula ya existe", 
                         "Cédula existe", JOptionPane.ERROR_MESSAGE);
-                jTextField1.requestFocus();
+                jtf_identificacion.requestFocus();
             }else {
-                if (f.ingresaCliente(jTextField1.getText(),jTextField2.getText(),jTextField3.getText(),
-                jTextField4.getText(), jComboBox1.getSelectedItem().toString(), jComboBox2.getSelectedItem().toString(), 
-                jTextField5.getText(), jTextField6.getText()) == 1){
+                if (f.ingresaCliente(jtf_identificacion.getText(),jtf_nombre.getText(),jtf_apellido1.getText(),
+                jtf_apellido2.getText(), jcb_banco.getSelectedItem().toString(), jcb_moneda.getSelectedItem().toString(), 
+                jtf_saldoInicial.getText(), jtf_creacion.getText()) == 1){
                     JOptionPane.showMessageDialog(null, "Se ha creado el cliente "
-                            +jTextField2.getText()+" correctamente", "Cliente creado", JOptionPane.INFORMATION_MESSAGE);
+                            +jtf_nombre.getText()+" correctamente", "Cliente creado", JOptionPane.INFORMATION_MESSAGE);
                     cleanFields();
                 }else{
                     JOptionPane.showMessageDialog(null, "Error al crear cliente "
-                            +jTextField2.getText(),"Error",JOptionPane.ERROR_MESSAGE);
+                            +jtf_nombre.getText(),"Error",JOptionPane.ERROR_MESSAGE);
                     cleanFields();
                 }
                 
@@ -343,10 +331,10 @@ public class creaCliente extends javax.swing.JFrame {
     }
 //GEN-LAST:event_jButton1ActionPerformed
     //Boton Regresar
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jb_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_regresarActionPerformed
         mf.show();
         this.hide(); this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jb_regresarActionPerformed
 
    
     /**
@@ -386,30 +374,30 @@ public class creaCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JButton jb_anadirSistema;
+    private javax.swing.JButton jb_regresar;
+    private javax.swing.JComboBox<String> jcb_banco;
+    private javax.swing.JComboBox<String> jcb_moneda;
+    private javax.swing.JLabel jl_Apellido1;
+    private javax.swing.JLabel jl_Apellido2;
+    private javax.swing.JLabel jl_Banco;
+    private javax.swing.JLabel jl_Creacion;
+    private javax.swing.JLabel jl_Identificacion;
+    private javax.swing.JLabel jl_InformacionBanco;
+    private javax.swing.JLabel jl_InformacionCliente;
+    private javax.swing.JLabel jl_Moneda;
+    private javax.swing.JLabel jl_Nombre;
+    private javax.swing.JLabel jl_SaldoInicial;
+    private javax.swing.JLabel jl_TituloAnadirCliente;
+    private javax.swing.JPanel jp_creaCliente;
+    private javax.swing.JTextField jtf_apellido1;
+    private javax.swing.JTextField jtf_apellido2;
+    private javax.swing.JTextField jtf_creacion;
+    private javax.swing.JTextField jtf_identificacion;
+    private javax.swing.JTextField jtf_nombre;
+    private javax.swing.JTextField jtf_saldoInicial;
     // End of variables declaration//GEN-END:variables
 }

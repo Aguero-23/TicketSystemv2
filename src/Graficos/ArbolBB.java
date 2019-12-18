@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Graficos;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.LinkedList;
 import javax.swing.JPanel;
-
 
 public class ArbolBB {
 
@@ -20,13 +14,13 @@ public class ArbolBB {
     public ArbolBB() {
         raiz = null;
     }
-    
+
     public boolean agregar(int dato) {
         Nodo nuevo = new Nodo(dato, null, null);
         insertar(nuevo, raiz);
         return true;
     }
-    
+
     //Metodo para insertar un dato en el arbol...no acepta repetidos :)
     public void insertar(Nodo nuevo, Nodo pivote) {
         if (this.raiz == null) {
@@ -63,7 +57,7 @@ public class ArbolBB {
         preorden(raiz, rec);
         return rec;
     }
-    
+
     public void preorden(Nodo aux, LinkedList recorrido) {
         if (aux != null) {
             recorrido.add(aux.getDato());
@@ -78,7 +72,7 @@ public class ArbolBB {
         inorden(raiz, rec);
         return rec;
     }
-    
+
     public void inorden(Nodo aux, LinkedList recorrido) {
         if (aux != null) {
             inorden(aux.getIzq(), recorrido);
@@ -93,6 +87,7 @@ public class ArbolBB {
         postorden(raiz, rec);
         return rec;
     }
+
     public void postorden(Nodo aux, LinkedList recorrido) {
         if (aux != null) {
             postorden(aux.getIzq(), recorrido);
@@ -129,11 +124,11 @@ public class ArbolBB {
         altura(raiz, 1);
         return alt;
     }
-    
-     public JPanel getdibujo() {
+
+    public JPanel getdibujo() {
         return new ArbolExpresionGrafico(this);
     }
-     
+
     public ResultSet consultaCliente() {
         String[] resul = new String[8];
         ResultSet myRs = null;

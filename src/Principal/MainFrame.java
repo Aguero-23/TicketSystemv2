@@ -32,13 +32,13 @@ public class MainFrame extends javax.swing.JFrame {
 
         jrdbG_Group = new javax.swing.ButtonGroup();
         jp_PanelPrincipal = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jl_FormularioTransacciones = new javax.swing.JLabel();
+        jl_TICKETSYSTEM = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel6 = new javax.swing.JLabel();
+        jl_Identificacion = new javax.swing.JLabel();
         jtf_Identificacion = new javax.swing.JTextField();
         jb_GenerarBoton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jl_PersonasEnCola = new javax.swing.JLabel();
         jrdb_Retiros = new javax.swing.JRadioButton();
         jrdb_Transferencias = new javax.swing.JRadioButton();
         jrdb_Informacion = new javax.swing.JRadioButton();
@@ -46,7 +46,7 @@ public class MainFrame extends javax.swing.JFrame {
         jb_Caja1 = new javax.swing.JButton();
         jb_Caja2 = new javax.swing.JButton();
         jb_Caja3 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        jmb_MenuBar = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -63,21 +63,21 @@ public class MainFrame extends javax.swing.JFrame {
         jp_PanelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         jp_PanelPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Formulario de transacciones");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jl_FormularioTransacciones.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jl_FormularioTransacciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jl_FormularioTransacciones.setText("Formulario de transacciones");
+        jl_FormularioTransacciones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jl_FormularioTransacciones.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_sales_performance_50px.png"))); // NOI18N
-        jLabel7.setText("Ticket System");
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jl_TICKETSYSTEM.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        jl_TICKETSYSTEM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_sales_performance_50px.png"))); // NOI18N
+        jl_TICKETSYSTEM.setText("Ticket System");
+        jl_TICKETSYSTEM.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         jSeparator1.setBackground(new java.awt.Color(255, 102, 0));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel6.setText("Identificación:");
+        jl_Identificacion.setText("Identificación:");
 
         jb_GenerarBoton.setBackground(new java.awt.Color(255, 255, 255));
         jb_GenerarBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_document_50px_4.png"))); // NOI18N
@@ -92,10 +92,10 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("Personas en Cola");
-        jLabel1.setEnabled(false);
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jl_PersonasEnCola.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jl_PersonasEnCola.setText("Personas en Cola");
+        jl_PersonasEnCola.setEnabled(false);
+        jl_PersonasEnCola.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         jrdb_Retiros.setText("Retiros");
         jrdb_Retiros.setName("R"); // NOI18N
@@ -173,16 +173,16 @@ public class MainFrame extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jl_PersonasEnCola, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(71, 71, 71)
-                                .addComponent(jLabel6))
+                                .addComponent(jl_Identificacion))
                             .addComponent(jl_persEnCola, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
                         .addGap(157, 157, 157)
-                        .addComponent(jLabel3))
+                        .addComponent(jl_FormularioTransacciones))
                     .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
                         .addGap(113, 113, 113)
-                        .addComponent(jLabel7)))
+                        .addComponent(jl_TICKETSYSTEM)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
@@ -210,15 +210,15 @@ public class MainFrame extends javax.swing.JFrame {
             jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jLabel7)
+                .addComponent(jl_TICKETSYSTEM)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(jl_FormularioTransacciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel1))
+                    .addComponent(jl_Identificacion)
+                    .addComponent(jl_PersonasEnCola))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jl_persEnCola)
                 .addGap(3, 3, 3)
@@ -244,7 +244,7 @@ public class MainFrame extends javax.swing.JFrame {
         jrdb_Transferencias.getAccessibleContext().setAccessibleName("jrdb_Transferencias");
         jrdb_Informacion.getAccessibleContext().setAccessibleName("jrdb_Informacion");
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
+        jmb_MenuBar.setBackground(new java.awt.Color(255, 255, 255));
 
         jMenu1.setBackground(new java.awt.Color(255, 255, 255));
         jMenu1.setText("Clientes");
@@ -282,7 +282,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem3);
 
-        jMenuBar1.add(jMenu1);
+        jmb_MenuBar.add(jMenu1);
 
         jMenu2.setBackground(new java.awt.Color(255, 255, 255));
         jMenu2.setText("Gráficos");
@@ -298,9 +298,9 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem5);
 
-        jMenuBar1.add(jMenu2);
+        jmb_MenuBar.add(jMenu2);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(jmb_MenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -496,13 +496,8 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
@@ -512,7 +507,12 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jb_Caja2;
     private javax.swing.JButton jb_Caja3;
     private javax.swing.JButton jb_GenerarBoton;
+    private javax.swing.JLabel jl_FormularioTransacciones;
+    private javax.swing.JLabel jl_Identificacion;
+    private javax.swing.JLabel jl_PersonasEnCola;
+    private javax.swing.JLabel jl_TICKETSYSTEM;
     private javax.swing.JLabel jl_persEnCola;
+    private javax.swing.JMenuBar jmb_MenuBar;
     private javax.swing.JPanel jp_PanelPrincipal;
     private javax.swing.ButtonGroup jrdbG_Group;
     private javax.swing.JRadioButton jrdb_Informacion;

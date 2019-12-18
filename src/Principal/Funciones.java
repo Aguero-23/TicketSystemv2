@@ -2,8 +2,6 @@ package Principal;
 
 import static Principal.MainFrame.c;
 import static Principal.MainFrame.nextInLine;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class Funciones {
