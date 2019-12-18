@@ -97,7 +97,7 @@ public class Vista extends javax.swing.JFrame {
         setResizable(false);
 
         jp_vistaGrafico.setBackground(new java.awt.Color(255, 255, 255));
-        jp_vistaGrafico.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Panel de Pruebas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 10))); // NOI18N
+        jp_vistaGrafico.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
         jp_vistaGrafico.setOpaque(false);
 
         jsp_resultados.setOpaque(false);
@@ -112,6 +112,7 @@ public class Vista extends javax.swing.JFrame {
 
         jdp_grafico.setOpaque(false);
 
+        jInternalFrame2.setBorder(javax.swing.BorderFactory.createTitledBorder("Arbol"));
         jInternalFrame2.setIconifiable(true);
         jInternalFrame2.setMaximizable(true);
         jInternalFrame2.setResizable(true);
@@ -123,17 +124,17 @@ public class Vista extends javax.swing.JFrame {
         jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
         jInternalFrame2Layout.setHorizontalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 584, Short.MAX_VALUE)
+            .addGap(0, 588, Short.MAX_VALUE)
         );
         jInternalFrame2Layout.setVerticalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 290, Short.MAX_VALUE)
+            .addGap(0, 286, Short.MAX_VALUE)
         );
 
         jdp_grafico.add(jInternalFrame2);
-        jInternalFrame2.setBounds(10, 10, 600, 320);
+        jInternalFrame2.setBounds(0, 0, 600, 320);
 
-        jb_inOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jb_inOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_stack_16px.png"))); // NOI18N
         jb_inOrden.setText("InOrden");
         jb_inOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,7 +142,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
-        jb_preOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jb_preOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_stack_16px.png"))); // NOI18N
         jb_preOrden.setText("PreOrden");
         jb_preOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,7 +150,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
-        jb_postOrden.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jb_postOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_stack_16px.png"))); // NOI18N
         jb_postOrden.setText("PostOrden");
         jb_postOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,6 +162,7 @@ public class Vista extends javax.swing.JFrame {
         jb_regresar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jb_regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_left_16px_2.png"))); // NOI18N
         jb_regresar.setText("Volver al menu");
+        jb_regresar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jb_regresar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jb_regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,23 +175,23 @@ public class Vista extends javax.swing.JFrame {
         jp_vistaGraficoLayout.setHorizontalGroup(
             jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
-                .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jdp_grafico, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_vistaGraficoLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jb_inOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(4, 4, 4)
+                                .addComponent(jb_inOrden)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jb_preOrden)
-                                .addGap(4, 4, 4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jb_postOrden))
                             .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
-                                .addGap(62, 62, 62)
-                                .addComponent(jb_regresar)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                                .addGap(68, 68, 68)
+                                .addComponent(jb_regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jsp_resultados, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 3, Short.MAX_VALUE))
+                .addGap(0, 30, Short.MAX_VALUE))
         );
         jp_vistaGraficoLayout.setVerticalGroup(
             jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,34 +201,29 @@ public class Vista extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jsp_resultados, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jp_vistaGraficoLayout.createSequentialGroup()
-                        .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jb_inOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jb_preOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jb_postOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_regresar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jp_vistaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jb_inOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jb_preOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jb_postOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addComponent(jb_regresar)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jp_vistaGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jp_vistaGrafico, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jp_vistaGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jp_vistaGrafico, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(670, 517));
+        jp_vistaGrafico.getAccessibleContext().setAccessibleName("Cuentas Activas");
+
+        setSize(new java.awt.Dimension(696, 529));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
