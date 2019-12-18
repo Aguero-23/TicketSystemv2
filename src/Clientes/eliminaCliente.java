@@ -352,7 +352,7 @@ public class eliminaCliente extends javax.swing.JFrame {
                 jTextField2.setText(rs.getString("Nombre"));
                 jTextField3.setText(rs.getString("Apellido1"));
                 jTextField4.setText(rs.getString("Apellido2"));
-                jTextField5.setText(rs.getString("Tipo"));
+                jTextField5.setText(rs.getString("Banco"));
                 jTextField6.setText(rs.getString("Moneda"));
                 jTextField7.setText(rs.getString("Saldo"));
                 jTextField8.setText(rs.getString("Fecha_Creacion"));

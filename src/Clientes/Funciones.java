@@ -4,10 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- *
- * @author kevinvsequeira
- */
 public class Funciones {
     
     public int ingresaCliente(String cedula, String nombre, String ape1, String ape2,
