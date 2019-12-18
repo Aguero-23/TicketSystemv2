@@ -5,7 +5,7 @@ import javax.swing.AbstractButton;
 import javax.swing.JOptionPane;
 
 public class MainFrame extends javax.swing.JFrame {
-
+    
     public static String nextInLine = null;
     int numTicket = 1;
     int contPersonas = 0;
@@ -14,15 +14,15 @@ public class MainFrame extends javax.swing.JFrame {
     String ticket = "";
     Funciones f = new Funciones();
     Clientes.Funciones cf = new Clientes.Funciones();
-
+    
     public MainFrame() {
-        initComponents();
+        initComponents();       
         jrdbG_Group.add(jrdb_Retiros);
         jrdbG_Group.add(jrdb_Informacion);
         jrdbG_Group.add(jrdb_Transferencias);
         jtf_Identificacion.requestFocus();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -56,6 +56,7 @@ public class MainFrame extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(500, 500));
 
         jp_PanelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        jp_PanelPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -68,11 +69,16 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel7.setText("Ticket System");
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
+        jSeparator1.setBackground(new java.awt.Color(255, 102, 0));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+
         jLabel6.setText("Identificación:");
 
         jb_GenerarBoton.setBackground(new java.awt.Color(255, 255, 255));
         jb_GenerarBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_document_50px_4.png"))); // NOI18N
         jb_GenerarBoton.setText("Generar Ticket");
+        jb_GenerarBoton.setBorder(null);
+        jb_GenerarBoton.setBorderPainted(false);
         jb_GenerarBoton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jb_GenerarBoton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jb_GenerarBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +123,7 @@ public class MainFrame extends javax.swing.JFrame {
         jb_Caja1.setBackground(new java.awt.Color(255, 255, 255));
         jb_Caja1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_administrator_male_32px.png"))); // NOI18N
         jb_Caja1.setText("Caja 1");
+        jb_Caja1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jb_Caja1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jb_Caja1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,6 +134,7 @@ public class MainFrame extends javax.swing.JFrame {
         jb_Caja2.setBackground(new java.awt.Color(255, 255, 255));
         jb_Caja2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_administrator_male_32px.png"))); // NOI18N
         jb_Caja2.setText("Caja 2");
+        jb_Caja2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jb_Caja2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jb_Caja2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +145,7 @@ public class MainFrame extends javax.swing.JFrame {
         jb_Caja3.setBackground(new java.awt.Color(255, 255, 255));
         jb_Caja3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_administrator_male_32px.png"))); // NOI18N
         jb_Caja3.setText("Caja 3");
+        jb_Caja3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jb_Caja3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jb_Caja3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,50 +157,49 @@ public class MainFrame extends javax.swing.JFrame {
         jp_PanelPrincipal.setLayout(jp_PanelPrincipalLayout);
         jp_PanelPrincipalLayout.setHorizontalGroup(
             jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
                 .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
-                        .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                                .addGap(181, 181, 181)
-                                .addComponent(jb_Caja2))
-                            .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                                        .addComponent(jrdb_Retiros)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jrdb_Transferencias))
-                                    .addComponent(jb_Caja1))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
-                        .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jrdb_Informacion)
-                            .addComponent(jb_Caja3)))
                     .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtf_Identificacion)
+                            .addComponent(jb_GenerarBoton, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
+                    .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                                .addGap(131, 131, 131)
-                                .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtf_Identificacion)
-                                    .addComponent(jb_GenerarBoton, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
-                            .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(71, 71, 71)
-                                        .addComponent(jLabel6))
-                                    .addComponent(jl_persEnCola, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                                .addGap(157, 157, 157)
-                                .addComponent(jLabel3)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                .addGap(113, 113, 113)
-                .addComponent(jLabel7)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(71, 71, 71)
+                                .addComponent(jLabel6))
+                            .addComponent(jl_persEnCola, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel3))
+                    .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(jLabel7)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jb_Caja1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(jrdb_Retiros)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jb_Caja2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jrdb_Transferencias))
+                        .addGap(54, 54, 54)
+                        .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jb_Caja3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jrdb_Informacion))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addComponent(jSeparator1)
+                        .addContainerGap())))
         );
         jp_PanelPrincipalLayout.setVerticalGroup(
             jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +210,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel1))
@@ -222,7 +230,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jb_Caja1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_Caja2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_Caja3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         jb_GenerarBoton.getAccessibleContext().setAccessibleName("jb_GenerarBoton");
@@ -295,28 +303,31 @@ public class MainFrame extends javax.swing.JFrame {
         boolean val = true;
         try {
             if (lis.buscar(Integer.parseInt(jtf_Identificacion.getText()))) { // Valida si la cédula ya está en espera
-                JOptionPane.showMessageDialog(this, "Ya estas en espera.", 
+                JOptionPane.showMessageDialog(this, "Ya estas en espera.",
                         "Cédula duplicada", JOptionPane.ERROR_MESSAGE);
-                val = false; jtf_Identificacion.requestFocus();
+                val = false;
+                jtf_Identificacion.requestFocus();
             } else if (jtf_Identificacion.getText().equals("") //Valida si el formulario esta vacio
                     || jtf_Identificacion.getText().equals(null)
                     || jtf_Identificacion.getText().equals(" ")
                     || jtf_Identificacion.getText().equals("0")) {
-
-                JOptionPane.showMessageDialog(this, "El formulario está vacio o le faltan datos.", 
+                
+                JOptionPane.showMessageDialog(this, "El formulario está vacio o le faltan datos.",
                         "Error en datos", JOptionPane.ERROR_MESSAGE);
-                val = false; jtf_Identificacion.requestFocus();
-            }else if(cf.consultaCliente(jtf_Identificacion.getText())==null){
+                val = false;
+                jtf_Identificacion.requestFocus();
+            } else if (cf.consultaCliente(jtf_Identificacion.getText()) == null) {
                 JOptionPane.showMessageDialog(null, "La cedula no se encuentra en el sistema, "
                         + "por favor verifíquela.", "Cédula no existe", JOptionPane.ERROR_MESSAGE);
-                val = false; jtf_Identificacion.requestFocus();
+                val = false;
+                jtf_Identificacion.requestFocus();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return val;
     }
-
+    
     private void InsertarTicket(String tipoTransacion) {
         ticket = tipoTransacion + numTicket;
         lis.insert(new Persona(Integer.parseInt(jtf_Identificacion.getText()), ticket, numTicket));
@@ -330,7 +341,7 @@ public class MainFrame extends javax.swing.JFrame {
     /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
     private void jb_GenerarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_GenerarBotonActionPerformed
-
+        
         if (ValidacionesForm()) {
             AbstractButton aux = getSelectedOption(); //Obtiene la seleccion del radio button
             if (aux == null) { // Si no se selecciona nada entonces devuelve un mensaje para que seleccione
@@ -339,7 +350,7 @@ public class MainFrame extends javax.swing.JFrame {
             } else { //Como se selecciono algo entonces inserta un ticket con este tipo de transaccion
                 InsertarTicket(aux.getName());
             }
-        }else{
+        } else {
             
         }
     }//GEN-LAST:event_jb_GenerarBotonActionPerformed
@@ -405,13 +416,17 @@ public class MainFrame extends javax.swing.JFrame {
     //Consulta Cliente
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         Clientes.consultaCliente cu = new Clientes.consultaCliente();
-        cu.show(); this.hide(); this.dispose();
+        cu.show();
+        this.hide();
+        this.dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     //Eliminar Cliente
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         Clientes.eliminaCliente cu = new Clientes.eliminaCliente();
-        cu.show(); this.hide(); this.dispose();
+        cu.show();
+        this.hide();
+        this.dispose();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
