@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static Principal.MainFrame.nextInLine;
+import javax.swing.JRootPane;
 
 // COMENTARIO PARA NUEVO PUSH
 public class atenderTransaccion extends javax.swing.JFrame {
@@ -20,6 +21,9 @@ public class atenderTransaccion extends javax.swing.JFrame {
     public atenderTransaccion() {
         initComponents();
         cargaInicial();
+        this.setResizable(false);
+        setUndecorated(true);
+        getRootPane().setWindowDecorationStyle(JRootPane.NONE);
     }
 
     public boolean validaMonto(int monto) {

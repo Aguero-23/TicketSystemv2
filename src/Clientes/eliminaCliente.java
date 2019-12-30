@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JRootPane;
 
 public class eliminaCliente extends javax.swing.JFrame {
 
@@ -15,6 +16,9 @@ public class eliminaCliente extends javax.swing.JFrame {
     public eliminaCliente() {
         initComponents();
         cargarInicial();
+        this.setResizable(false);
+        setUndecorated(true);
+        getRootPane().setWindowDecorationStyle(JRootPane.NONE);
     }
     
     public void cargarInicial(){

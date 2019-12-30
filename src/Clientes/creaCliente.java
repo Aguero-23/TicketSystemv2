@@ -2,6 +2,7 @@ package Clientes;
 
 import java.util.Calendar;
 import javax.swing.JOptionPane;
+import javax.swing.JRootPane;
 
 public class creaCliente extends javax.swing.JFrame {
 
@@ -10,6 +11,9 @@ public class creaCliente extends javax.swing.JFrame {
     public creaCliente() {
         initComponents();
         cargarInicial();
+        this.setResizable(false);
+        setUndecorated(true);
+        getRootPane().setWindowDecorationStyle(JRootPane.NONE);
     }
     
     public void cargarInicial(){
@@ -66,6 +70,7 @@ public class creaCliente extends javax.swing.JFrame {
         jl_InformacionBanco = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Añadir Cliente");
 
         jp_creaCliente.setBackground(new java.awt.Color(255, 255, 255));
         jp_creaCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));

@@ -11,6 +11,7 @@ import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JRootPane;
 
 /**
  *
@@ -21,13 +22,16 @@ public class consultaCliente extends javax.swing.JFrame {
     Funciones f = new Funciones();
     Principal.MainFrame mf = new Principal.MainFrame();
     Clientes.Cliente c = new Clientes.Cliente(null);
-    
+
     public consultaCliente() {
         initComponents();
         cargarInicial();
+        this.setResizable(false);
+        setUndecorated(true);
+        getRootPane().setWindowDecorationStyle(JRootPane.NONE);
     }
-    
-    public void cargarInicial(){
+
+    public void cargarInicial() {
         jtf_identificacion.setEditable(false);
         jtf_nombre.setEditable(false);
         jtf_apellido1.setEditable(false);
@@ -37,7 +41,6 @@ public class consultaCliente extends javax.swing.JFrame {
         jtf_saldoInicial.setEditable(false);
         jtf_creacion.setEditable(false);
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -339,29 +342,29 @@ public class consultaCliente extends javax.swing.JFrame {
 
     //Boton Consultar
     private void jb_consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_consultarActionPerformed
-        if(jtf_identificacionConsultar.getText().equals("") ){
+        if (jtf_identificacionConsultar.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Debe de digitar una cedula para realizar la busqueda",
                     "Sin cédula", JOptionPane.ERROR_MESSAGE);
-        }else{
+        } else {
             ResultSet rs = f.consultaCliente(jtf_identificacionConsultar.getText());
-            if( rs !=null){
+            if (rs != null) {
                 String[] data = new String[8];
                 try {
 //                    System.out.println("Cedula CC: "+rs.getString("Cedula"));
-                jtf_identificacion.setText(rs.getString("Cedula"));
-                jtf_nombre.setText(rs.getString("Nombre"));
-                jtf_apellido1.setText(rs.getString("Apellido1"));
-                jtf_apellido2.setText(rs.getString("Apellido2"));
-                jtf_banco.setText(rs.getString("Banco"));
-                jtf_moneda.setText(rs.getString("Moneda"));
-                jtf_saldoInicial.setText(rs.getString("Saldo"));
-                jtf_creacion.setText(rs.getString("Fecha_Creacion"));
+                    jtf_identificacion.setText(rs.getString("Cedula"));
+                    jtf_nombre.setText(rs.getString("Nombre"));
+                    jtf_apellido1.setText(rs.getString("Apellido1"));
+                    jtf_apellido2.setText(rs.getString("Apellido2"));
+                    jtf_banco.setText(rs.getString("Banco"));
+                    jtf_moneda.setText(rs.getString("Moneda"));
+                    jtf_saldoInicial.setText(rs.getString("Saldo"));
+                    jtf_creacion.setText(rs.getString("Fecha_Creacion"));
                 } catch (SQLException ex) {
                     Logger.getLogger(consultaCliente.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, "No se encontraron registros asociados a la cedula "
-                        +jtf_identificacionConsultar.getText(), "Sin registros",JOptionPane.ERROR_MESSAGE);
+                        + jtf_identificacionConsultar.getText(), "Sin registros", JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_jb_consultarActionPerformed
@@ -369,7 +372,8 @@ public class consultaCliente extends javax.swing.JFrame {
     //Añadir al sistema
     private void jb_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_regresarActionPerformed
         mf.show();
-        this.hide(); this.dispose();
+        this.hide();
+        this.dispose();
     }//GEN-LAST:event_jb_regresarActionPerformed
 
     private void jtf_monedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_monedaActionPerformed

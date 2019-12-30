@@ -20,6 +20,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     public MainFrame() {
         initComponents();
+        this.setResizable(false);
         jrdbG_Group.add(jrdb_Retiros);
         jrdbG_Group.add(jrdb_Informacion);
         jrdbG_Group.add(jrdb_Transferencias);

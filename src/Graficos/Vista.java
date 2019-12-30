@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 import javax.swing.JInternalFrame;
 import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
+import javax.swing.JRootPane;
 
 public class Vista extends javax.swing.JFrame {
 
@@ -26,6 +27,9 @@ public class Vista extends javax.swing.JFrame {
         initComponents();
         this.inicializar(false);
         cargaInicial();
+        this.setResizable(false);
+        setUndecorated(true);
+        getRootPane().setWindowDecorationStyle(JRootPane.NONE);
     }
 
     public void cargaInicial() throws SQLException {
@@ -261,7 +265,8 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_postOrdenActionPerformed
 
     private void jb_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_regresarActionPerformed
-        // TODO add your handling code here:
+        Principal.MainFrame mf = new Principal.MainFrame();
+        mf.show(); this.hide(); this.dispose();
     }//GEN-LAST:event_jb_regresarActionPerformed
 
     public void complementos() {

@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static Principal.MainFrame.nextInLine;
+import javax.swing.JRootPane;
 
 /**
  *
@@ -23,6 +24,9 @@ public class atenderConsulta extends javax.swing.JFrame {
     public atenderConsulta() {
         initComponents();
         cargaInicial();
+        this.setResizable(false);
+        setUndecorated(true);
+        getRootPane().setWindowDecorationStyle(JRootPane.NONE);
     }
 
     public boolean validaMonto(int monto) {
